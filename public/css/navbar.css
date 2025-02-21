@@ -19,7 +19,7 @@ nav {
   justify-content: space-between;
   height: 150px;
   align-items: center;
-  width: 100%;    
+  width: 100%;
   margin: 0 76px;
 }
 
@@ -28,6 +28,12 @@ nav ul li a {
   text-decoration: none;
   color: white;
   padding: 16px;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo {
@@ -47,6 +53,7 @@ nav ul li a {
 
 .links a {
   margin: 0 15px 0 0;
+  display: flex;
 }
 
 
@@ -74,4 +81,10 @@ nav ul li a {
 .btn_criar:hover {
   background-color: #FFF;
   color: #3623AD;
+}
+
+
+.icons_menu {
+  font-size: 20px;
+  margin: 0 3px 0 0;
 }
