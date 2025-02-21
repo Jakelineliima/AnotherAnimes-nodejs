@@ -56,6 +56,10 @@ nav ul li a {
   display: flex;
 }
 
+.links a:hover{
+  color: #3623AD;
+  font-family: 20px;
+}
 
 .btns_lg {
   display: flex;
@@ -88,3 +92,10 @@ nav ul li a {
   font-size: 20px;
   margin: 0 3px 0 0;
 }
+
+.icons_menu_login {
+  font-size: 40px;
+  margin: 0 3px 0 0;
+}
+
+/* Dropdown */
