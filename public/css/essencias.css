@@ -6,6 +6,8 @@
 body {
   font-family: "Poppins", sans-serif !important;
   font-size: 14px;
+  display: flex;
+  flex-direction: column;
 }
 
 a {
@@ -24,6 +26,3 @@ a {
   border-radius: 22px;
   color: #fff;
 }
-
-
-

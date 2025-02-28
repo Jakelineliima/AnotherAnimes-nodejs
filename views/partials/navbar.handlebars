@@ -1,16 +1,16 @@
-<header id="header">
+<header id="header" class="container">
   <div class="menu">
     <nav>
-      
+
 
       <div class="links menu-link">
         <a class="logo" href="/">
-        <img class="logo_geral" src="/img/logo.png" alt="logo" />
-      </a>
+          <img class="logo_geral" src="/img/logo.png" alt="logo" />
+        </a>
         <a href="/"><i class='icons_menu bx bx-home-alt-2'></i> Home</a>
 
         <a href="/contato/contato">
-          <i class='icons_menu bx bxs-contact' ></i> Contato
+          <i class='icons_menu bx bxs-contact'></i> Contato
         </a>
 
       </div>
@@ -35,16 +35,24 @@
           <a type="button" class="btn btn_login" href="/usuario/logout">
             Sair
           </a>
+          <div class="dropdown-menu">
+            <a href="/usuario/perfil">Perfil</a>
+            <a href="/usuario/configuracoes">Configurações</a>
+            <a href="/usuario/logout">Logout</a>
+          </div>
           {{else}}
-          {{!-- <a type="button" class="btn btn_criar" href="/usuario/registro">
-            Criar
-            conta
-          </a> --}}
+        
+          <div type="button" class="user_navbar" onclick="escondeDropdown(event)">
+            <span><i class='icons_menu_login bx bxs-user-circle'></i></span>
 
-          <a type="button" class="" href="/usuario/login">
-            <i class='icons_menu_login bx bxs-user-circle'></i>
-          </a>
+            <div class="dropdown_navbar">
+              <a class="btn btn_login" href="/usuario/login">Entrar</a>
+          
+              <a class="btn btn_criar" href="/usuario/registro">Criar conta</a>
+            </div>
+          </div>
           {{/if}}
+
         </div>
       </div>
     </nav>
