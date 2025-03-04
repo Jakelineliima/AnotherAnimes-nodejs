@@ -20,6 +20,10 @@
   padding: 43px;
 }
 
+.icones_redes i{
+  font-size: 42px;
+}
+
 .redes_div p {
   margin: -17px auto;
 }
@@ -33,42 +37,5 @@
 
 }
 
+
 /* Css responsive */
-
-
-
-@media (max-width: 800px) {
-  .menu {
-    display: none;
-  }
-
-  .menu_mobile {
-    display: block;
-
-  }
-
-  .nav_header_mobile {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
-  }
-
-  .nav_header_mobile a {
-    width: 103px;
-    height: 40px;
-    margin: 0 18px 0 0;
-  }
-
-  .nav_links_mobile {
-    display: flex;
-    justify-content: space-around;
-    background-color: #111111;
-    font-size: 16px;
-    font-weight: bold;
-    width: 100%;
-    height: 70px;
-
-  }
-
-}

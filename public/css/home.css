@@ -75,8 +75,12 @@ button {
 .card_icons div {
   display: flex;
   align-items: center;
-  padding: 20px;
+  margin: 0 0 46px 0;
 }
+
+.card_icons div:nth-child(4){
+  margin: 0 0 0 0;
+} 
 
 .icons_bg {
   background-color: #3623AD;
@@ -155,7 +159,7 @@ button {
   margin: 0 10px 0 0;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
   .login_2 {
     margin: -57px 50px 66px 40px;
   }
@@ -172,4 +176,10 @@ button {
   .img_card_home {
     width: 340px;
   }
+
+  .card_icons_1{
+    flex-direction: column;
+    justify-content: center;
+  }
+ 
 }

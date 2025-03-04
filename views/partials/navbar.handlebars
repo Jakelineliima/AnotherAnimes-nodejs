@@ -1,13 +1,16 @@
 <header id="header" class="container">
   <div class="menu">
-    <nav>
+    <nav class="menu_desktop">
 
 
       <div class="links menu-link">
+
         <a class="logo" href="/">
-          <img class="logo_geral" src="/img/logo.png" alt="logo" />
+          <img class="logo_geral" src="/img/logo_v3.svg" alt="logo" />
         </a>
-        <a href="/"><i class='icons_menu bx bx-home-alt-2'></i> Home</a>
+
+        <a href="/">
+          <i class='icons_menu bx bxs-home-alt-2'></i> Home</a>
 
         <a href="/contato/contato">
           <i class='icons_menu bx bxs-contact'></i> Contato
@@ -15,18 +18,18 @@
 
       </div>
 
-      <div class="menu-link">
+      <div class="links">
 
         <div class="links">
 
           <a href="/salvo/salvos">
-            <i class='icons_menu bx bx-movie-play'></i> Animes
+            <i class='icons_menu bx bxs-movie-play'></i> Animes
           </a>
           <a href="/salvo/salvos">
-            <i class='icons_menu bx bx-book-bookmark'></i> Mangás
+            <i class='icons_menu bx bxs-book-bookmark'></i> Mangás
           </a>
           <a href="/salvo/salvos">
-            <i class='icons_menu bx bx-joystick'></i> Jogos
+            <i class='icons_menu bx bxs-joystick'></i> Jogos
           </a>
 
         </div>
@@ -41,15 +44,16 @@
             <a href="/usuario/logout">Logout</a>
           </div>
           {{else}}
-        
           <div type="button" class="user_navbar" onclick="escondeDropdown(event)">
             <span><i class='icons_menu_login bx bxs-user-circle'></i></span>
 
             <div class="dropdown_navbar">
               <a class="btn btn_login" href="/usuario/login">Entrar</a>
-          
+
               <a class="btn btn_criar" href="/usuario/registro">Criar conta</a>
             </div>
+
+
           </div>
           {{/if}}
 
@@ -57,52 +61,57 @@
       </div>
     </nav>
   </div>
+  <nav class="menu_mobile">
 
-  <div class="menu_mobile">
-    <div>
-      <nav class="nav_header_mobile">
-        <a class="logo" href="/">
-          <img class="logo_footer" src="/img/logo.png" alt="logo" />
-        </a>
-
-        <div class="btns_lg">
-          {{#if user}}
-          <a type="button" class="btn btn_login" href="/usuario/logout">
-            Sair
-          </a>
-          {{else}}
-          <a type="button" class="btn btn_criar" href="/usuario/registro">
-            Criar
-            conta
-          </a>
-
-          <a type="button" class="btn btn_login" href="/usuario/login">
-            Entrar
-          </a>
-          {{/if}}
-        </div>
+    <div class="links">
+      <a class="logo_mobile" href="/">
+        <img class="logo_geral" src="/img/logo_v3.svg" alt="logo" />
+      </a>
     </div>
-    </nav>
 
-    <nav class="nav_links_mobile">
-      <a href="/contato/contato">
-        Contato
-      </a>
-
-      <a href="/sobre">
-        Sobre
-      </a>
-
+    <div class="links_mobile">
       {{#if user}}
-      <a href="/salvo/salvos">
-        Salvos
+      <a type="button" class="btn btn_login" href="/usuario/logout">
+        Sair
       </a>
+      <div class="dropdown_menu_mobile">
+        <a href="/usuario/perfil">Perfil</a>
+        <a href="/usuario/configuracoes">Configurações</a>
+        <a href="/usuario/logout">Logout</a>
+      </div>
       {{else}}
+      <div type="button" class="user_navbar_mobile" onclick="dropdownMobile(event)">
 
+        <span ><i onclick="fecharMenuMobile(event)" class='icons_menu bx bx-menu'></i></span>
+
+
+        <div class="dropdown_navbar_mobile">
+
+          <span><i class='bx bx-x'></i></span>
+          <div class="btns_login_mobile">
+            <a class="btn btn_login_mobile" href="/usuario/login">Entrar</a>
+            <a class="btn btn_criar_mobile" href="/usuario/registro">Criar conta</a>
+          </div>
+
+          <div class="">
+            <a href="/salvo/salvos">
+              <i class='icons_menu bx bxs-movie-play'></i> Animes
+            </a>
+            <a href="/salvo/salvos">
+              <i class='icons_menu bx bxs-book-bookmark'></i> Mangás
+            </a>
+            <a href="/salvo/salvos">
+              <i class='icons_menu bx bxs-joystick'></i> Jogos
+            </a>
+
+          </div>
+        </div>
+
+      </div>
       {{/if}}
-    </nav>
-    <hr>
-  </div>
 
-  </div>
+    </div>
+
+
+  </nav>
 </header>

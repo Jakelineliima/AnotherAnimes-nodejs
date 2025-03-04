@@ -74,6 +74,7 @@ cloudinary.config({
 
 // Mongoose
 mongoose.Promise = global.Promise;
+mongoose.set('strictQuery', true)
 
 mongoose
   .connect(MONGODB_URI =
