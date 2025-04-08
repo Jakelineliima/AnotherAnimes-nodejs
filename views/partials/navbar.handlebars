@@ -82,12 +82,11 @@
       {{else}}
       <div type="button" class="user_navbar_mobile" onclick="dropdownMobile(event)">
 
-        <span ><i onclick="fecharMenuMobile(event)" class='icons_menu bx bx-menu'></i></span>
-
+        <span style="color: #fff"><i class='icons_menu bx bx-menu'></i></span>
 
         <div class="dropdown_navbar_mobile">
 
-          <span><i class='bx bx-x'></i></span>
+          <span type="button" class="dropdown_navbar_mobile" onclick="dropdownMobile(event)" ><i class='bx bx-x'></i>fechar</span>
           <div class="btns_login_mobile">
             <a class="btn btn_login_mobile" href="/usuario/login">Entrar</a>
             <a class="btn btn_criar_mobile" href="/usuario/registro">Criar conta</a>
@@ -111,7 +110,6 @@
       {{/if}}
 
     </div>
-
 
   </nav>
 </header>

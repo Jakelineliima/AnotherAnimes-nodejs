@@ -169,12 +169,13 @@ nav ul li a {
     margin: auto;
   }
 
-  .bx-menu, .bx-x {
+  .bx-menu,
+  .bx-x {
     font-size: 35px;
     color: #fff;
   }
 
-  
+
   .logo_mobile {
     margin: 35px 0 auto;
   }
@@ -193,68 +194,70 @@ nav ul li a {
     margin: 0;
   }
 
-  .btns_login_mobile{
+  .btns_login_mobile {
     display: flex;
     flex-direction: row;
   }
-.btn{
-  border: 1px solid;
-}
+
+  .btn {
+    border: 1px solid;
+  }
 
   /* Dropdown mobile */
 
-.user_navbar_mobile {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.user_navbar_mobile>span {
-  display: flex;
-  border-radius: 50%;
-  padding: 10px;
-  cursor: pointer;
-}
-
-.user_navbar_mobile>.dropdown_navbar_mobile>.btn_login {
-  transition: all -1.6s;
-}
-
-.user_navbar_mobile>.dropdown_navbar_mobile {
- width: 100%;
- height: 100%;
- top: 0px;
- right: 0px;
-
-  position: absolute;
-  background-color: #000;
-  z-index: 1;
-  
-  display: none;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  border-radius: 10px;
-
-}
-
-.dropdown_menu_mobile a:hover {
-  background-color: #f1f1f1;
-}
-
-.dropdown:hover .dropdown_menu_mobile {
-  display: block;
-}
-
-}
-
-@media (min-width: 380px) {
-  .logo_geral {
-    width: auto;
+  .user_navbar_mobile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
   }
 
-  .bx-menu {
-    font-size: 45px;
+  .user_navbar_mobile>span {
+    display: flex;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .user_navbar_mobile>.dropdown_navbar_mobile>.btn_login {
+    transition: all -1.6s;
+  }
+
+  .user_navbar_mobile>.dropdown_navbar_mobile {
+    width: 350px;
+    height: 350px;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    background-color: #004EF7;
+    z-index: 1;
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 0 0 42px 0px;
+
+  }
+
+  .dropdown_menu_mobile a:hover {
+    background-color: #f1f1f1;
+  }
+
+  .dropdown:hover .dropdown_menu_mobile {
+    display: block;
   }
 }
+  span {
+    color: #fff;
+    align-items: center;
+  }
+
+  @media (min-width: 380px) {
+    .logo_geral {
+      width: auto;
+    }
+
+    .bx-menu {
+      font-size: 45px;
+    }
+  }
