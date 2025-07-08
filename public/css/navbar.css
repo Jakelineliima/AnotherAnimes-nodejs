@@ -58,8 +58,9 @@ nav ul li a {
   display: flex;
 }
 
-.btn_login {
+.btn_login, .btn_criar {
   text-decoration: none;
+  margin: 0 0px 0 0 !important;
 }
 
 .btn_login:hover {
@@ -105,9 +106,28 @@ nav ul li a {
   -webkit-transition: width 0.4s ease;
 }
 
+.btns_login_mobile a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 23px;
+  right: 0;
+  background: #004EF7;
+  transition: width 0.4s ease;
+  -webkit-transition: width 0.4s ease;
+}
+
 .links a:hover::after {
   width: 100%;
   left: 0;
+  background: #004EF7;
+}
+
+.dropdown_navbar a:hover::after {
+  width: 80%;
+  left: 15px;
   background: #004EF7;
 }
 
@@ -247,9 +267,13 @@ nav ul li a {
     display: block;
   }
 }
-  span {
+.dropdown_navbar_mobile span {
     color: #fff;
+    display: flex;
     align-items: center;
+    position: relative;
+    bottom: 56px;
+    left: 145px;;
   }
 
   @media (min-width: 380px) {

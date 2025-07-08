@@ -34,7 +34,9 @@ input[type="text"], input[type="email"], input[type="password"]{
 .btn_cadastrar_user_div{
   margin: 16px auto;
 }
+
 .btn_cadastro_user{
+  background-color:#004EF7 ;
   font-weight: bold;
   cursor: pointer;
   text-align: center;
