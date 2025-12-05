@@ -8,7 +8,7 @@
 
         <a href="/">
           <i class="icons_menu bx bxs-home-alt-2"></i>
-          Home
+          Home 
         </a>
 
         <a href="/contato/contato">
@@ -34,39 +34,35 @@
         </div>
         <div class="btns_lg">
           {{#if user}}
-            <a type="button" class="btn btn_login" href="/usuario/logout">
-              Sair
+          <a type="button" class="btn btn_login" href="/usuario/logout">
+            Sair
+          </a>
+          <div class="dropdown-menu">
+            <a href="/usuario/perfil">
+              Perfil
             </a>
-            <div class="dropdown-menu">
-              <a href="/usuario/perfil">
-                Perfil
-              </a>
-              <a href="/usuario/configuracoes">
-                Configurações
-              </a>
-              <a href="/usuario/logout">
-                Logout
-              </a>
-            </div>
+            <a href="/usuario/configuracoes">
+              Configurações
+            </a>
+            <a href="/usuario/logout">
+              Logout
+            </a>
+          </div>
           {{else}}
-            <div
-              type="button"
-              class="user_navbar"
-              onclick="escondeDropdown(event)"
-            >
-              <span>
-                <i class="icons_menu_login bx bxs-user-circle"></i>
-              </span>
+          <div type="button" class="user_navbar" onclick="escondeDropdown(event)">
+            <span>
+              <i class="icons_menu_login bx bxs-user-circle"></i>
+            </span>
 
-              <div class="dropdown_navbar">
-                <a class="btn_login" href="/usuario/login">
-                  Entrar
-                </a>
-                <a class="btn_criar" href="/usuario/registro">
-                  Criar conta
-                </a>
-              </div>
+            <div class="dropdown_navbar">
+              <a class="btn_login" href="/usuario/login">
+                Entrar
+              </a>
+              <a class="btn_criar" href="/usuario/registro">
+                Criar conta
+              </a>
             </div>
+          </div>
           {{/if}}
         </div>
       </div>
@@ -81,59 +77,56 @@
 
     <div class="links_mobile">
       {{#if user}}
-        <a type="button" class="btn btn_login" href="/usuario/logout">
-          Sair
+      <a type="button" class="btn btn_login" href="/usuario/logout">
+        Sair
+      </a>
+      <div class="dropdown_menu_mobile">
+        <a href="/usuario/perfil">
+          Perfil
         </a>
-        <div class="dropdown_menu_mobile">
-          <a href="/usuario/perfil">
-            Perfil
-          </a>
-          <a href="/usuario/configuracoes">
-            Configurações
-          </a>
-          <a href="/usuario/logout">
-            Logout
-          </a>
-        </div>
+        <a href="/usuario/configuracoes">
+          Configurações
+        </a>
+        <a href="/usuario/logout">
+          Logout
+        </a>
+      </div>
       {{else}}
-        <div
-          type="button"
-          class="user_navbar_mobile"
-          onclick="dropdownMobile(event)"
-        >
-          <span style="color: #fff">
-            <i class="icons_menu bx bx-menu"></i>
+      <div type="button" class="user_navbar_mobile" onclick="dropdownMobile(event)">
+        <span style="color: #fff">
+          <i class="icons_menu bx bx-menu"></i>
+        </span>
+
+        <div class="dropdown_navbar_mobile">
+          <span type="button" onclick="dropdownMobile(event)">
+            <i class="bx bx-x"></i>
           </span>
 
-          <div class="dropdown_navbar_mobile">
-            <span type="button" onclick="dropdownMobile(event)">
-              <i class="bx bx-x"></i>
-            </span>
-            <div class="btns_login_mobile">
-              <a class="btn btn_login_mobile" href="/usuario/login">
-                Entrar
-              </a>
-              <a class="btn btn_criar_mobile" href="/usuario/registro">
-                Criar conta
-              </a>
-            </div>
-
-            <div class="">
-              <a href="/salvo/salvos">
-                <i class="icons_menu bx bxs-movie-play"></i>
-                Animes
-              </a>
-              <a href="/salvo/salvos">
-                <i class="icons_menu bx bxs-book-bookmark"></i>
-                Mangás
-              </a>
-              <a href="/salvo/salvos">
-                <i class="icons_menu bx bxs-joystick"></i>
-                Jogos
-              </a>
-            </div>
+          <div class="btns_login_mobile">
+            <a class="btn_login_mobile" href="/usuario/login">
+              Entrar
+            </a>
+            <a class="btn_login_mobile" href="/usuario/registro">
+              Criar conta asdadsa
+            </a>
+          </div>
+          <hr class="hr_mobile_modal">
+          <div class="link_menu_mobile">
+            <a href="/salvo/salvos">
+              <i class="icons_menu bx bxs-movie-play"></i>
+              Animes
+            </a>
+            <a href="/salvo/salvos">
+              <i class="icons_menu bx bxs-book-bookmark"></i>
+              Mangás
+            </a>
+            <a href="/salvo/salvos">
+              <i class="icons_menu bx bxs-joystick"></i>
+              Jogos
+            </a>
           </div>
         </div>
+      </div>
       {{/if}}
     </div>
   </nav>
