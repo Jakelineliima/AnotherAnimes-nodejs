@@ -26,3 +26,6 @@ nodemon.on('restart', function () {
     browserSync.reload();
   }, 300);
 });
+
+
+//  Reinicia o servidor quando houver alterações nos arquivos .js, .handlebars ou .css, e atualiza o navegador automaticamente.

@@ -30,40 +30,45 @@
 {{else}}
 
 {{/each}}
-<div class="container_cadastro_eps">
 
-  <form action="/salvo/adicionar/add" method="POST" enctype="multipart/form-data">
-    <legend>Salve seus animes favoritos:</legend>
-    <input type="tst" name="usuario" placeholder="Titulo" value="{{user._id}}">
-    <br><br>
-    <label for="titulo">Título:</label><br>
-    <input type="text" name="titulo" placeholder="Título:" required>
-    <br><br>
-    <div class="temp_ep">
-      <label for="temporada">Temporada:</label>
-      <input type="text" name="temporada" placeholder="Temporada">
+<div class="container_cadastro" >
+  <div class="container_cadastro_eps">
+  
+    <form action="/salvo/adicionar/add" method="POST" enctype="multipart/form-data">
+      <legend>Salve seus animes favoritos:</legend>
+      <input type="tst" name="usuario" placeholder="Titulo" value="{{user._id}}">
       <br><br>
-      <label for="episodio">Episódio:</label>
-      <input type="number" name="episodio" placeholder="Episódio">
-
-    </div>
-
-
-    <br><br>
-    <div class="upload_img_div">
-      <label class="label_text_upload" for="">Adicionar imagem</label>
-      <label for="inputFile" class="upload_img">Selecionar imagem</label><br>
-      <input id="inputFile" type="file" name="imagem" required/>
-    </div>
-    <div id="imagePreview"></div>
-    <br>
-
-    <div class="btn_cadastrar_eps_div">
-      <button class="btn btn_login btn_cadastro_ep" type="submit">Salvar</button>
-    </div>
-
-  </form>
+      <label for="titulo">Título:</label><br>
+      <input type="text" name="titulo" placeholder="Título:" required>
+      <br><br>
+      <div class="temp_ep">
+        <label for="temporada">Temporada:</label>
+        <input type="text" name="temporada" placeholder="Temporada">
+        <br><br>
+        <label for="episodio">Episódio:</label>
+        <input type="number" name="episodio" placeholder="Episódio">
+  
+      </div>
+  
+  
+      <br><br>
+      <div class="upload_img_div">
+        <label class="label_text_upload" for="">Adicionar imagem</label>
+        <label for="inputFile" class="upload_img">Selecionar imagem</label><br>
+        <input id="inputFile" type="file" name="imagem" required />
+      </div>
+      <div id="imagePreview"></div>
+      <br>
+  
+      <div class="btn_cadastrar_eps_div">
+        <button class="btn btn_login btn_cadastro_ep" type="submit">Salvar</button>
+      </div>
+  
+    </form>
+  </div>
 </div>
+
+
 
 
 <script>
