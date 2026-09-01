@@ -1,3 +1,13 @@
+
+require("dotenv").config();
+console.log("CLIENT ID:", process.env.GOOGLE_CLIENT_ID);
+require("./models/Usuario");
+require("./models/Salvo");
+require("./models/Contato");
+require("./config/db");
+require("./config/cloudinary");
+require("./config/auth")(passport);
+
 const express = require("express");
 const handlebars = require("express-handlebars");
 const { engine } = require("express-handlebars");
@@ -11,12 +21,6 @@ const session = require("express-session");
 const flash = require("connect-flash");
 const passport = require("passport");
 
-require("./models/Usuario");
-require("./models/Salvo");
-require("./models/Contato");
-require("./config/db");
-require("./config/cloudinary");
-require("./config/auth")(passport);
 
 
 // ===== Configurações =====

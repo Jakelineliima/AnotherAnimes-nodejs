@@ -5,7 +5,6 @@
     "sass": "sass --watch public/scss/main.scss:public/css/main.css",
     "dev": "concurrently \"npm run sass\" \"nodemon index.js\"",
     "start": "node index.js"
-  
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -13,12 +12,14 @@
     "cloudinary": "^1.41.0",
     "connect-flash": "^0.1.1",
     "cookie-session": "^2.0.0",
+    "dotenv": "^17.4.2",
     "express": "^4.22.2",
     "express-handlebars": "^6.0.2",
     "express-session": "^1.17.2",
     "mongoose": "^6.2.1",
     "multer": "^1.4.5-lts.1",
     "passport": "^0.7.0",
+    "passport-google-oauth20": "^2.0.0",
     "passport-local": "^1.0.0"
   },
   "description": "<img align=\"center\" alt=\"Nodejs\" height=\"30\" width=\"98\"\r     src=\"https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white\">\r   <img align=\"center\" alt=\"Nodejs\" height=\"30\" width=\"98\"\r     src=\"https://img.shields.io/badge/Express.js-404D59?style=for-the-badge\">\r   <img align=\"center\" alt=\"mongodb\" height=\"30\" width=\"108\"\r     src=\"https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white\">",
