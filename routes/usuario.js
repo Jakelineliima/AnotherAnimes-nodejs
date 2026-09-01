@@ -112,10 +112,14 @@ router.post("/login", (req, res, next) => {
 });
 
 
-router.get("/logout", (req, res) => {
-  req.logout();
+router.get("/logout", (req, res, next) => {
+  req.logout((err)=>{
+    if(err){
+      return next(err);
+    }
   req.flash("success_mgs", "Você saiu");
-  res.redirect("/");
+    res.redirect("/");
+  });
 });
 
 

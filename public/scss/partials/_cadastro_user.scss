@@ -6,11 +6,6 @@
   align-items: center;
   height: 600px;
 }
-label{
-  color: #fff;
-  font-size: 15px;
-  margin: 0 0 0 10px;
-}
 
 legend{
   font-size: 35px;
@@ -46,6 +41,25 @@ input[type="text"], input[type="email"], input[type="password"]{
   font-size: 15px;
   border-radius: 25px;
   margin: 0;
+
+}
+
+.btn_cadastro_user:hover{
+  background-color: #3623AD;
+}
+
+.form_cadastro{
+ background-color: #2c2c2c;
+  width: 500px;
+  height: 400px;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+label {
+  color: #fff;
+  font-size: 15px;
+  margin: 0 0 0 10px;
 }
 
 @media(max-width: 500px) {
