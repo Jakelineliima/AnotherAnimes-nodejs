@@ -1,4 +1,6 @@
-.container_cadastro{
+@use "variables" as *;
+
+.container_cadastro {
   background-color: #fff;
   display: flex;
   justify-content: center;
@@ -7,31 +9,32 @@
   height: 600px;
 }
 
-legend{
+legend {
   font-size: 35px;
   font-weight: bold;
   color: #fff;
   text-align: center;
 }
 
-input{
+input {
   width: 450px;
   height: 45px;
   border: none;
   border-radius: 20px;
   margin: 10px auto;
 }
-input[type="text"], input[type="email"], input[type="password"]{
+input[type="text"],
+input[type="email"],
+input[type="password"] {
   padding-left: 20px;
 }
 
-
-.btn_cadastrar_user_div{
+.btn_cadastrar_user_div {
   margin: 16px auto;
 }
 
-.btn_cadastro_user{
-  background-color:#004EF7 ;
+.btn_cadastro_user {
+  background-color: #004ef7;
   font-weight: bold;
   cursor: pointer;
   text-align: center;
@@ -41,35 +44,32 @@ input[type="text"], input[type="email"], input[type="password"]{
   font-size: 15px;
   border-radius: 25px;
   margin: 0;
-
 }
 
-.btn_cadastro_user:hover{
-  background-color: #3623AD;
+.btn_cadastro_user:hover {
+  background-color: #3623ad;
 }
 
-.form_cadastro{
- background-color: #2c2c2c;
+.form_cadastro {
+  background-color: $color-bg-secundary;
   width: 500px;
   height: 400px;
   border-radius: 20px;
   padding: 20px;
+  label {
+    color: #fff;
+    font-size: 15px;
+    margin: 0 0 0 10px;
+  }
 }
 
-label {
-  color: #fff;
-  font-size: 15px;
-  margin: 0 0 0 10px;
-}
-
-@media(max-width: 500px) {
+@media (max-width: 500px) {
   .btn_cadastro_user > form {
     margin: 70px 0 0 0;
-    
   }
-  input, textarea, legend{
+  input,
+  textarea,
+  legend {
     width: 440px;
   }
 }
-
-
