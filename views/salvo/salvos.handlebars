@@ -51,3 +51,20 @@
 
 
 </div>
+
+<form action="/usuario/excluir-conta" method="POST" id="form-excluir-conta">
+  <button type="submit" class="btn-excluir-conta">
+    Excluir minha conta
+  </button>
+</form>
+
+<script>
+  document.getElementById("form-excluir-conta").addEventListener("submit", function (e) {
+    const confirmado = confirm(
+      "Tem certeza que deseja excluir sua conta? Essa ação não pode ser desfeita."
+    );
+    if (!confirmado) {
+      e.preventDefault();
+    }
+  });
+</script>

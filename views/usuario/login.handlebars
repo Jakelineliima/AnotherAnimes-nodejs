@@ -1,65 +1,48 @@
+{{#each erros}}
+<div class="alert alert-danger">
+  {{texto}}
+</div>
+{{else}}
+{{/each}}
 
-  {{!-- <div class="bannerlogin">
-    <img src="/img/login-bg.jpg" alt="banner" />
-  </div>
-  <div class="titulo">
-    <h1>Faça login</h1>
-  </div>
-  <div class="formulario">
-    <form action="/usuario/login" method="POST">
-      <div class="form-group">
-        <input
-          type="email"
-          class="form-control form-login"
-          id="exampleInputEmail1"
-          aria-describedby="emailHelp"
-          placeholder="E-mail"
-          name="email"
-          required
-        />
-      </div>
-      <div class="form-group">
-        <input
-          type="password"
-          class="form-control form-login"
-          id="exampleInputPassword1"
-          placeholder="Senha"
-          name="senha"
-          required
-        />
-      </div>
-      <button
-        class="btn btnlogin"
-      >Entrar</button>
-    </form>
-  </div> --}}
-
-  {{#each erros}}
-    <div class="alert alert-danger">
-      {{texto}}
-    </div>
-  {{else}}
-  {{/each}}
-
-  <div class="container_cadastro">
+<div class="container_cadastro">
   <form class="form_cadastro" form action="/usuario/login" method="POST">
 
     <legend>Faça Login</legend>
     <br>
     <hr>
     <br>
-  
-      <label for="email">Digite um email:</label><br>
-      <input type="email" name="email" placeholder="Email" required>
-      <br><br>  
-      <label for="senha">Digite sua senha:</label><br>
-      <input type="password" name="senha" placeholder="Senha" required>
+
+    <div><label for="email">Digite um email:</label><br>
+      <div class="input_login">
+        <input type="email" name="email" placeholder="Email" required>
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"
+          style="fill: #000;transform: ;msFilter:;">
+          <path
+            d="M20 4H4c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm0 2v.511l-8 6.223-8-6.222V6h16zM4 18V9.044l7.386 5.745a.994.994 0 0 0 1.228 0L20 9.044 20.002 18H4z">
+          </path>
+        </svg>
+      </div>
       <br><br>
-     
-    <div class="btn_cadastrar_user_div">
-      <button class="btn btn_cadastro_user" type="submit">Entrar</button>
+      <label for="senha">Digite sua senha:</label><br>
+      <div class="input_login">
+        <input type="password" name="senha" placeholder="Senha" required>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+          style="fill: rgba(0, 0, 0, 0);transform: ;msFilter:;">
+          <path
+            d="M12 2C9.243 2 7 4.243 7 7v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7c0-2.757-2.243-5-5-5zM9 7c0-1.654 1.346-3 3-3s3 1.346 3 3v3H9V7zm4 10.723V20h-2v-2.277a1.993 1.993 0 0 1 .567-3.677A2.001 2.001 0 0 1 14 16a1.99 1.99 0 0 1-1 1.723z">
+          </path>
+        </svg>
+      </div>
+      <br><br>
+
+      <div class="btn_cadastrar_user_div">
+        <button class="btn btn_cadastro_user" type="submit">Entrar</button>
+        <a class="btn btn_cadastro_user" href="/usuario/google">Login com google</a>
+      </div>
     </div>
+
+
 
   </form>
 </div>
-

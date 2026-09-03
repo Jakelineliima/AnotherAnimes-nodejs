@@ -100,7 +100,7 @@ router.post("/registro", (req, res) => {
 });
 
 router.get("/login", (req, res) => {
- res.render("usuario/login");
+  res.render("usuario/login");
 });
 
 router.post("/login", (req, res, next) => {
@@ -111,15 +111,51 @@ router.post("/login", (req, res, next) => {
   })(req, res, next);
 });
 
+// ----- Login com Google -----
+router.get(
+  "/google",
+  passport.authenticate("google", { scope: ["profile", "email"] })
+);
+
+router.get(
+  "/google/callback",
+  passport.authenticate("google", { failureRedirect: "/usuario/registro" }),
+  (req, res) => {
+    req.flash("success_mgs", "Login realizado com sucesso!");
+    res.redirect("/salvo/salvos");
+  }
+);
 
 router.get("/logout", (req, res, next) => {
-  req.logout((err)=>{
-    if(err){
+  req.logout((err) => {
+    if (err) {
       return next(err);
     }
-  req.flash("success_mgs", "Você saiu");
+    req.flash("success_mgs", "Você saiu");
     res.redirect("/");
   });
+});
+
+router.post("/excluir-conta", (req, res, next) => {
+  if (!req.user) {
+    req.flash("error_mgs", "Você precisa estar logado para excluir a conta");
+    return res.redirect("/usuario/login");
+  }
+
+  const usuarioId = req.user.id;
+
+  Usuario.findByIdAndDelete(usuarioId)
+    .then(() => {
+      req.logout((err) => {
+        if (err) return next(err);
+        req.flash("success_mgs", "Sua conta foi excluída com sucesso");
+        res.redirect("/");
+      });
+    })
+    .catch((err) => {
+      req.flash("error_mgs", "Não foi possível excluir sua conta, tente novamente");
+      res.redirect("/salvo/salvos");
+    });
 });
 
 

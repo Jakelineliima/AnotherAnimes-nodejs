@@ -63,6 +63,15 @@ input[type="password"] {
   }
 }
 
+.input_login {
+  position: relative;
+  svg {
+    position: absolute;
+    top: 20px;
+    right: 46px;
+  }
+}
+
 @media (max-width: 500px) {
   .btn_cadastro_user > form {
     margin: 70px 0 0 0;

@@ -10,6 +10,16 @@
       "runOptions": {
         "runOn": "folderOpen"
       }
+    },{
+      "label": "serve",
+      "type": "shell",
+      "command": "npm run dev",
+      "isBackground": true,
+      "problemMatcher": [],
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
     }
   ]
 }
+
